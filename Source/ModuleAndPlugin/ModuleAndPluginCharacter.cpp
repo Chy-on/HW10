@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Test/TestActor.h"
+#include "Temporary/TemporaryActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -98,6 +99,7 @@ void AModuleAndPluginCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	GetWorld()->SpawnActor(ATestActor::StaticClass());
+	GetWorld()->SpawnActor(ATemporaryActor::StaticClass());
 }
 
 void AModuleAndPluginCharacter::Move(const FInputActionValue& Value)
